@@ -40,58 +40,6 @@ Service Usage & Tenure:
 Financial Features:
 •	monthly_charges: Amount charged to customer monthly ($)
 •	total_charges: Total amount charged since joining ($)
-Temporal Features:
-•	last_interaction_date: Date of last customer interaction
-•	signup_date: Customer signup date (available only in file2)
-Geographic Features:
-•	region: Geographic region/state of customer
-Target Variable:
-•	churn: Boolean target variable (True = churned, False = active)
-Engineered/Calculated Features:
-From SQL-style Aggregations:
-•	days_since_last_interaction: Days since last customer interaction
-•	tenure_years: Tenure converted to years
-•	complaint_indicator: Derived based on recent interactions and high charges
-•	recharge_frequency: total_charges / monthly_charges
-•	usage_intensity: monthly_charges / tenure_months
-•	value_for_money: monthly_charges / total_charges
-Customer Segments Created:
-•	Loyal Customers: Long tenure, stable usage patterns
-•	At Risk Customers: Recent activity drops, high churn probability
-•	Dormant Customers: Low recent activity
-•	High Value Customers: Premium services, high revenue
-Data Characteristics Based on Analysis:
-Key Statistics Mentioned:
-•	Churn Rate: Approximately 25% (based on the 85% accuracy context)
-•	Age Range: 18-90 years 
-•	Tenure Range: 0-72 months (6 years)
-•	Monthly Charges: $18-$150
-•	Total Charges: $18-$8,000
-Regional Distribution:
-•	50 different regions/states
-•	North Dakota being the most common region (4,180 customers)
-Service Adoption:
-•	Phone Service: ~50% adoption
-•	Paperless Billing: ~50% adoption
-•	Senior Citizens: ~50% of customer base
-Data Quality Notes:
-Handled in Preprocessing:
-•	No duplicate customer IDs
-•	Missing signup_date for records from first file
-•	Boolean conversions for categorical variables
-•	DateTime conversions for date columns
-•	Regional data encoded for ML models
-Data Relationships Explored:
-•	Correlation between tenure and churn
-•	Monthly charges impact on retention
-•	Regional churn patterns
-•	Service bundle effects on loyalty
-•	Age demographic behavior patterns
- 2. Exploratory Data Analysis
-- Analyzed churn distribution across demographic segments
-- Identified correlation patterns between features and churn
-- Visualized customer behavior patterns and regional trends
-
 
 3. Feature Engineering
 - Created SQL-style aggregations for call duration, complaints, and recharge patterns
@@ -127,11 +75,4 @@ The customer churn prediction system successfully addresses the critical busines
 3. **Proactive Strategy**: Early intervention opportunities for at-risk customers
 4. **Resource Optimization**: Targeted retention efforts maximizing ROI
 
-The implemented solution enables telecom companies to transition from reactive to proactive customer retention strategies, potentially saving millions in lost revenue while improving customer satisfaction and loyalty.
-
-**Key Business Impact**:
-- 30% improvement in customer retention efficiency
-- 25% reduction in churn-related revenue loss
-- Enhanced customer lifetime value through targeted interventions
-- Data-driven decision making for marketing and retention budgets
 
